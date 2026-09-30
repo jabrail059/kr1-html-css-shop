@@ -84,7 +84,12 @@ footer {
   чтобы оно не растягивалось слишком сильно на широких экранах.
 */
 .site-header {
-  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -118,8 +123,11 @@ a:focus-visible {
   Убираем стандартные отступы и маркеры списка навигации.
 */
 .site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
   padding: 0;
-  margin: 16px 0 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -127,7 +135,7 @@ a:focus-visible {
   Добавляем расстояние между пунктами меню.
 */
 .site-nav__list li {
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 /*
@@ -172,12 +180,19 @@ a:focus-visible {
 }
 
 
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
 /*
-  Карточка товара — самостоятельный блок.
-  На следующих занятиях карточки будут доработаны и выстроены в сетку.
+  Карточка товара — самостоятельный БЭМ-блок.
+  Карточки выстроены в адаптивную Grid-сетку.
 */
 .product-card {
-  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -188,8 +203,21 @@ a:focus-visible {
   border-color: var(--color-primary);
 }
 
-.product-card h3 {
+.product-card__title {
   margin-top: 0;
+}
+
+.product-card__description {
+  flex-grow: 1;
+}
+
+.product-card__price {
+  font-weight: bold;
+}
+
+.product-card__button {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 
