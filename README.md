@@ -12,12 +12,26 @@
 
 - `index.html` — главная страница;
 - `catalog.html` — каталог товаров;
+- `product-*.html` — отдельные страницы товаров с описанием и характеристиками;
 - `contacts.html` — контактная информация;
 - `css/style.css` — файл стилей;
 - `js/main.js` — файл JavaScript;
 - `images/` — папка для изображений;
 - `README.md` — описание проекта;
 - `.gitignore` — список файлов, исключённых из Git.
+
+## Фотографии товаров
+
+Фотографии сохранены в `images/` и загружаются локально. Они иллюстрируют категории товаров; названия и характеристики карточек созданы для учебного проекта. Использованы копии файлов Wikimedia Commons, для крупных оригиналов — уменьшенные версии, без дополнительного редактирования:
+
+| Файл | Автор и источник | Лицензия |
+| --- | --- | --- |
+| `lamp.jpg` | [ViajeroExtraviado](https://commons.wikimedia.org/wiki/File:Black_desk_lamp.jpg) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| `stand.jpg` | [Solijon Solayev](https://commons.wikimedia.org/wiki/File:Laptop_stand.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `organizer.jpg` | [Jeff Sheldon](https://commons.wikimedia.org/wiki/File:Gather,_The_minimal,_modular_organizer._(Unsplash).jpg) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| `mug.jpg` | [Brugo](https://commons.wikimedia.org/wiki/File:Travel_mug.jpg) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| `backpack.jpg` | [Sir Tragedy](https://commons.wikimedia.org/wiki/File:Wenger_backpack.jpg) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| `headphones.jpg` | [Corey Blaz](https://commons.wikimedia.org/wiki/File:Headphones_on_wood_in_black_and_white_(Unsplash).jpg) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
 
 ## Дополнительные элементы
 

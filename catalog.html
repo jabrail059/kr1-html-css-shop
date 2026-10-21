@@ -7,7 +7,6 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Учебный интернет-магазин">
   <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-  <meta property="og:image" content="https://jabrail059.github.io/kr1-html-css-shop/images/preview.jpg">
   <title>Каталог товаров — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,78 +35,117 @@
 
     <section class="section">
       <h1 class="section__title">Каталог товаров</h1>
-      <p class="section__description">
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
-      </p>
+      <p class="section__description">Шесть товаров для удобного рабочего места, учёбы и поездок. Нажмите «Подробнее», чтобы открыть страницу товара.</p>
     </section>
 
-    <section class="catalog-layout">
+    <div class="catalog-layout">
       <aside class="catalog-filters">
-        <h2 class="catalog-filters__title">Фильтры</h2>
-
-        <form class="catalog-filters__form" action="#" method="get">
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Категория</legend>
-
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="all">
-              Все товары
-            </label>
-
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="popular">
-              Популярные
-            </label>
-
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="new">
-              Новинки
-            </label>
-          </fieldset>
-
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Цена</legend>
-
-            <label class="catalog-filters__label" for="price-from">От</label>
-            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-
-            <label class="catalog-filters__label" for="price-to">До</label>
-            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
-          </fieldset>
-
-          <button class="button button--primary" type="submit">Применить</button>
-        </form>
+        <h2 class="catalog-filters__title">Категории</h2>
+        <nav class="catalog-filters__nav" aria-label="Категории каталога">
+          <ul class="catalog-filters__list">
+            <li><a class="catalog-filters__link" href="#desk">Для рабочего стола</a></li>
+            <li><a class="catalog-filters__link" href="#travel">В дорогу</a></li>
+            <li><a class="catalog-filters__link" href="#audio">Аудио</a></li>
+          </ul>
+        </nav>
       </aside>
 
       <section class="catalog-products">
-        <h2 class="catalog-products__title">Список товаров</h2>
+        <h2 class="catalog-products__title">Все товары <span class="catalog-products__count">6 товаров</span></h2>
+        <section class="catalog-products__group" id="desk">
+          <h3 class="catalog-products__group-title">Для рабочего стола</h3>
+          <div class="products-grid">
+            <article class="product-card product-card--featured">
+              <div class="product-card__media">
+                <img class="product-card__image" src="images/lamp.jpg" alt="Чёрная настольная лампа на светлом фоне" width="960" height="961" loading="lazy" decoding="async">
+                <span class="product-card__badge">Хит</span>
+              </div>
+              <p class="product-card__category">Для рабочего стола</p>
+              <h4 class="product-card__title">Лампа «Фокус»</h4>
+              <p class="product-card__description">Регулируемый свет для чтения и вечерней работы.</p>
+              <p class="product-card__availability">В наличии</p>
+              <p class="product-card__price">2 490 ₽</p>
+              <a class="button button--secondary product-card__button" href="product-lamp.html">Подробнее</a>
+            </article>
 
-        <div class="products-grid">
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-          </article>
+            <article class="product-card product-card--new">
+              <div class="product-card__media">
+                <img class="product-card__image" src="images/stand.jpg" alt="Чёрная складная подставка для ноутбука" width="960" height="1280" loading="lazy" decoding="async">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
+              </div>
+              <p class="product-card__category">Для рабочего стола</p>
+              <h4 class="product-card__title">Подставка «Угол»</h4>
+              <p class="product-card__description">Складная опора поднимает экран до уровня глаз.</p>
+              <p class="product-card__availability">В наличии</p>
+              <p class="product-card__price">1 890 ₽</p>
+              <a class="button button--secondary product-card__button" href="product-stand.html">Подробнее</a>
+            </article>
 
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1500 руб.</p>
-            <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-          </article>
+            <article class="product-card product-card--sale">
+              <div class="product-card__media">
+                <img class="product-card__image" src="images/organizer.jpg" alt="Настольный органайзер с канцелярией и мелочами" width="960" height="615" loading="lazy" decoding="async">
+                <span class="product-card__badge product-card__badge--sale">Скидка</span>
+              </div>
+              <p class="product-card__category">Для рабочего стола</p>
+              <h4 class="product-card__title">Органайзер «Порядок»</h4>
+              <p class="product-card__description">Канцелярия, заметки и мелочи всегда под рукой.</p>
+              <p class="product-card__availability">В наличии</p>
+              <p class="product-card__price"><del class="product-card__old-price">1 290 ₽</del> 990 ₽</p>
+              <a class="button button--secondary product-card__button" href="product-organizer.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
 
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
-            <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-          </article>
-        </div>
+        <section class="catalog-products__group" id="travel">
+          <h3 class="catalog-products__group-title">В дорогу</h3>
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-card__media">
+                <img class="product-card__image" src="images/mug.jpg" alt="Красная дорожная термокружка с крышкой" width="816" height="1524" loading="lazy" decoding="async">
+              </div>
+              <p class="product-card__category">В дорогу</p>
+              <h4 class="product-card__title">Термокружка «Ритм»</h4>
+              <p class="product-card__description">Напиток остаётся тёплым во время дороги и занятий.</p>
+              <p class="product-card__availability">В наличии</p>
+              <p class="product-card__price">1 290 ₽</p>
+              <a class="button button--secondary product-card__button" href="product-mug.html">Подробнее</a>
+            </article>
+
+            <article class="product-card product-card--new">
+              <div class="product-card__media">
+                <img class="product-card__image" src="images/backpack.jpg" alt="Красный рюкзак с передним карманом" width="960" height="1194" loading="lazy" decoding="async">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
+              </div>
+              <p class="product-card__category">В дорогу</p>
+              <h4 class="product-card__title">Рюкзак «Маршрут»</h4>
+              <p class="product-card__description">Компактный рюкзак для занятий и коротких поездок.</p>
+              <p class="product-card__availability">В наличии</p>
+              <p class="product-card__price">3 490 ₽</p>
+              <a class="button button--secondary product-card__button" href="product-backpack.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalog-products__group" id="audio">
+          <h3 class="catalog-products__group-title">Аудио</h3>
+          <div class="products-grid">
+            <article class="product-card product-card--unavailable">
+              <div class="product-card__media">
+                <img class="product-card__image" src="images/headphones.jpg" alt="Чёрные полноразмерные наушники на тёмном фоне" width="960" height="641" loading="lazy" decoding="async">
+                <span class="product-card__badge product-card__badge--unavailable">Нет в наличии</span>
+              </div>
+              <p class="product-card__category">Аудио</p>
+              <h4 class="product-card__title">Наушники «Такт»</h4>
+              <p class="product-card__description">Беспроводные наушники для занятий и музыки.</p>
+              <p class="product-card__availability product-card__availability--unavailable">Нет в наличии</p>
+              <p class="product-card__price">3 990 ₽</p>
+              <a class="button button--secondary product-card__button" href="product-headphones.html">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" disabled>Заказать</button>
+            </article>
+          </div>
+        </section>
       </section>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
