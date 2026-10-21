@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
+  <title>ShopProject — товары для учёбы и работы</title>
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:title" content="ShopProject">
+  <meta property="og:description" content="Товары для учёбы, рабочего места и поездок.">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -22,15 +22,15 @@
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#faq">FAQ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Основное содержимое страницы -->
     <section class="hero">
-      <h1 class="hero__title">Учебный интернет-магазин</h1>
+      <h1 class="hero__title">Всё для учёбы и работы</h1>
       <p class="hero__description">
         Товары для удобной учёбы, рабочего места и поездок.
         Посмотрите популярные модели или откройте полный каталог.
@@ -40,13 +40,12 @@
     </section>
 
     <section class="section" id="advantages">
-      <h2 class="section__title">Преимущества проекта</h2>
+      <h2 class="section__title">Почему с нами удобно</h2>
 
       <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
+        <li class="advantages-list__item"><strong>Всё в одном месте</strong><span>Товары для рабочего стола, учёбы и поездок.</span></li>
+        <li class="advantages-list__item"><strong>Удобный выбор</strong><span>Цены, наличие и характеристики на страницах товаров.</span></li>
+        <li class="advantages-list__item"><strong>Быстрая заявка</strong><span>Выберите товар и заполните короткую форму.</span></li>
       </ul>
     </section>
     
@@ -68,10 +67,10 @@
           </ul>
           <p class="product-card__availability">В наличии</p>
           <p class="product-card__price">2 490 ₽</p>
-          <a class="button button--secondary product-card__more" href="product-lamp.html">Подробнее</a>
-          <button class="button button--primary product-card__button" type="button" data-product="Лампа «Фокус»">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product-lamp.html">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Лампа «Фокус»">Заказать</button>
+          </div>
         </article>
 
         <article class="product-card product-card--new" id="product-stand">
@@ -88,10 +87,10 @@
           </ul>
           <p class="product-card__availability">В наличии</p>
           <p class="product-card__price">1 890 ₽</p>
-          <a class="button button--secondary product-card__more" href="product-stand.html">Подробнее</a>
-          <button class="button button--primary product-card__button" type="button" data-product="Подставка «Угол»">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product-stand.html">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Подставка «Угол»">Заказать</button>
+          </div>
         </article>
 
         <article class="product-card" id="product-mug">
@@ -107,22 +106,85 @@
           </ul>
           <p class="product-card__availability">В наличии</p>
           <p class="product-card__price">1 290 ₽</p>
-          <a class="button button--secondary product-card__more" href="product-mug.html">Подробнее</a>
-          <button class="button button--primary product-card__button" type="button" data-product="Термокружка «Ритм»">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product-mug.html">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Термокружка «Ритм»">Заказать</button>
+          </div>
         </article>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <h2 class="section__title" id="reviews-title">Отзывы покупателей</h2>
+      <p class="section__description">Что говорят о товарах.</p>
+      <div class="reviews-grid">
+        <article class="review-card review-card--featured">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">А</span>
+            <div>
+              <h3 class="review-card__author">Анна</h3>
+              <a class="review-card__product" href="product-lamp.html">Лампа «Фокус»</a>
+            </div>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="5 из 5 звёзд">★★★★★</span><span class="review-card__score">5,0</span></div>
+          <blockquote class="review-card__quote">Удобно направлять свет на рабочую поверхность, когда занимаюсь вечером.</blockquote>
+        </article>
+        <article class="review-card">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">М</span>
+            <div>
+              <h3 class="review-card__author">Михаил</h3>
+              <a class="review-card__product" href="product-stand.html">Подставка «Угол»</a>
+            </div>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="5 из 5 звёзд">★★★★★</span><span class="review-card__score">5,0</span></div>
+          <blockquote class="review-card__quote">На столе стало проще разместить ноутбук и записи рядом с ним.</blockquote>
+        </article>
+        <article class="review-card">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">Е</span>
+            <div>
+              <h3 class="review-card__author">Елена</h3>
+              <a class="review-card__product" href="product-mug.html">Термокружка «Ритм»</a>
+            </div>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="4 из 5 звёзд">★★★★☆</span><span class="review-card__score">4,0</span></div>
+          <blockquote class="review-card__quote">Беру напиток с собой на занятия: кружку удобно держать в руке.</blockquote>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--faq" id="faq" aria-labelledby="faq-title">
+      <h2 class="section__title" id="faq-title">Часто задаваемые вопросы</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary class="faq__question">Где посмотреть характеристики товара?</summary>
+          <p class="faq__answer">Нажмите «Подробнее» в карточке товара на главной странице или в каталоге. Откроется отдельная страница с фотографией, подробным описанием, характеристиками, ценой и отзывами. Там же можно проверить наличие и вернуться в нужный раздел каталога.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Как оформить заявку?</summary>
+          <p class="faq__answer">Выберите товар и нажмите «Заказать» на его странице или в карточке среди популярных товаров. В открывшейся форме уже будет указано название товара: заполните имя, электронную почту и телефон, при желании добавьте комментарий, затем отметьте согласие на обработку данных. После проверки полей появится сообщение о заполненной заявке.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Где узнать, есть ли товар в наличии?</summary>
+          <p class="faq__answer">Посмотрите пометку «В наличии» или «Нет в наличии» в карточке каталога. Такой же статус показан на странице товара рядом с ценой и кнопкой заказа. Это позволяет проверить доступность до заполнения заявки.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Почему кнопка заказа может быть недоступна?</summary>
+          <p class="faq__answer">Если товар отмечен как «Нет в наличии», кнопка «Заказать» отключена, поэтому открыть форму заявки для него нельзя. При этом страница товара остаётся доступной: можно посмотреть фотографии, характеристики и отзывы, а затем вернуться в каталог и выбрать другой товар.</p>
+        </details>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    <p class="site-footer__text">&copy; 2026 ShopProject. Все права защищены.</p>
+    <p class="site-footer__text">Товары для учёбы, работы и поездок.</p>
   </footer>
 
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <p class="order-dialog__product">Товар: <strong id="order-dialog-product"></strong></p>
 
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
       <input id="selected-product" name="selected-product" type="hidden">
@@ -220,9 +282,10 @@
     </form>
   </dialog>
 
-  <p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
+  <p class="success-message" id="success-message" role="status" hidden>
+    Заявка заполнена.
   </p>
 
+  <a class="back-to-top" href="#">↑ Наверх</a>
 </body>
 </html>

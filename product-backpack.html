@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Рюкзак «Маршрут» — описание и характеристики товара.">
-  <title>Рюкзак «Маршрут» — Учебный интернет-магазин</title>
+  <title>Рюкзак «Маршрут» — ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +20,7 @@
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
         </ul>
       </nav>
     </div>
@@ -38,23 +40,59 @@
       <div class="product-detail__content">
         <p class="product-detail__category"><a href="catalog.html#travel">В дорогу</a></p>
         <h1 class="product-detail__title">Рюкзак «Маршрут»</h1>
+        <div class="product-detail__rating">
+          <span class="product-detail__stars product-detail__stars--four-half" role="img" aria-label="Средняя оценка 4,5 из 5 звёзд">★★★★★</span>
+          <strong>4,5</strong>
+          <a href="#product-reviews">2 отзыва</a>
+        </div>
+        <h2 class="product-detail__heading">О товаре</h2>
         <p class="product-detail__description">Компактный рюкзак для занятий и коротких поездок. В нём предусмотрено место для ноутбука.</p>
+        <p class="product-detail__description">Основное отделение рассчитано на повседневные вещи, а отдельное место помогает аккуратно разместить ноутбук. Подойдёт для учебного дня и поездок по городу.</p>
         <p class="product-detail__availability">В наличии</p>
         <p class="product-detail__price">3 490 ₽</p>
+        <div class="product-detail__actions">
+          <button class="button button--primary" type="button" data-product="Рюкзак «Маршрут»">Заказать</button>
+          <a class="button button--secondary" href="catalog.html#travel">Вернуться в каталог</a>
+        </div>
         <h2 class="product-detail__heading">Характеристики</h2>
-        <ul class="product-detail__features">
-          <li>Объём 18 л</li>
-          <li>Отделение для ноутбука 15,6″</li>
-          <li>Водоотталкивающая ткань</li>
-        </ul>
-        <a class="button button--secondary" href="catalog.html#travel">Вернуться в каталог</a>
+        <dl class="product-detail__specs">
+            <div class="product-detail__spec-row"><dt>Объём</dt><dd>18 л</dd></div>
+            <div class="product-detail__spec-row"><dt>Отделение для ноутбука</dt><dd>До 15,6″</dd></div>
+            <div class="product-detail__spec-row"><dt>Ткань</dt><dd>Водоотталкивающая</dd></div>
+        </dl>
       </div>
     </article>
+
+    <section class="section product-reviews" id="product-reviews" aria-labelledby="product-reviews-title">
+      <div class="product-reviews__header">
+        <h2 class="section__title" id="product-reviews-title">Отзывы о товаре</h2>
+        <span class="product-reviews__count">2 отзыва</span>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card review-card--featured">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">Н</span>
+            <h3 class="review-card__author">Никита</h3>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="5 из 5 звёзд">★★★★★</span><span class="review-card__score">5,0</span></div>
+          <blockquote class="review-card__quote">Помещаются ноутбук и вещи на день, при этом рюкзак не выглядит громоздким.</blockquote>
+        </article>
+        <article class="review-card">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">М</span>
+            <h3 class="review-card__author">Мария</h3>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="4 из 5 звёзд">★★★★☆</span><span class="review-card__score">4,0</span></div>
+          <blockquote class="review-card__quote">Удобный вариант для занятий и коротких поездок по городу.</blockquote>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    <p class="site-footer__text">&copy; 2026 ShopProject. Все права защищены.</p>
+    <p class="site-footer__text">Товары для учёбы, работы и поездок.</p>
   </footer>
+  <a class="back-to-top" href="#">↑ Наверх</a>
 </body>
 </html>

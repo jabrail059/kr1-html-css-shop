@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Лампа «Фокус» — описание и характеристики товара.">
-  <title>Лампа «Фокус» — Учебный интернет-магазин</title>
+  <title>Лампа «Фокус» — ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -19,6 +20,7 @@
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
         </ul>
       </nav>
     </div>
@@ -38,23 +40,59 @@
       <div class="product-detail__content">
         <p class="product-detail__category"><a href="catalog.html#desk">Для рабочего стола</a></p>
         <h1 class="product-detail__title">Лампа «Фокус»</h1>
+        <div class="product-detail__rating">
+          <span class="product-detail__stars product-detail__stars--five" role="img" aria-label="Средняя оценка 5,0 из 5 звёзд">★★★★★</span>
+          <strong>5,0</strong>
+          <a href="#product-reviews">2 отзыва</a>
+        </div>
+        <h2 class="product-detail__heading">О товаре</h2>
         <p class="product-detail__description">Регулируемый свет для чтения и вечерней работы. Подойдёт для учебного стола и рабочего места.</p>
+        <p class="product-detail__description">Три режима освещения помогают подобрать свет для разных задач. Лампу можно использовать рядом с книгами, конспектами или ноутбуком.</p>
         <p class="product-detail__availability">В наличии</p>
         <p class="product-detail__price">2 490 ₽</p>
+        <div class="product-detail__actions">
+          <button class="button button--primary" type="button" data-product="Лампа «Фокус»">Заказать</button>
+          <a class="button button--secondary" href="catalog.html#desk">Вернуться в каталог</a>
+        </div>
         <h2 class="product-detail__heading">Характеристики</h2>
-        <ul class="product-detail__features">
-          <li>3 режима освещения</li>
-          <li>Цветовая температура 3000–6000 К</li>
-          <li>Питание USB-C</li>
-        </ul>
-        <a class="button button--secondary" href="catalog.html#desk">Вернуться в каталог</a>
+        <dl class="product-detail__specs">
+            <div class="product-detail__spec-row"><dt>Режимы освещения</dt><dd>3</dd></div>
+            <div class="product-detail__spec-row"><dt>Цветовая температура</dt><dd>3000–6000 К</dd></div>
+            <div class="product-detail__spec-row"><dt>Питание</dt><dd>USB-C</dd></div>
+        </dl>
       </div>
     </article>
+
+    <section class="section product-reviews" id="product-reviews" aria-labelledby="product-reviews-title">
+      <div class="product-reviews__header">
+        <h2 class="section__title" id="product-reviews-title">Отзывы о товаре</h2>
+        <span class="product-reviews__count">2 отзыва</span>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card review-card--featured">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">А</span>
+            <h3 class="review-card__author">Анна</h3>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="5 из 5 звёзд">★★★★★</span><span class="review-card__score">5,0</span></div>
+          <blockquote class="review-card__quote">Удобно направлять свет на рабочую поверхность, когда занимаюсь вечером.</blockquote>
+        </article>
+        <article class="review-card">
+          <div class="review-card__person">
+            <span class="review-card__avatar" aria-hidden="true">И</span>
+            <h3 class="review-card__author">Игорь</h3>
+          </div>
+          <div class="review-card__rating"><span class="review-card__stars" role="img" aria-label="5 из 5 звёзд">★★★★★</span><span class="review-card__score">5,0</span></div>
+          <blockquote class="review-card__quote">Для чтения и работы за столом света хватает, режимы переключаются удобно.</blockquote>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    <p class="site-footer__text">&copy; 2026 ShopProject. Все права защищены.</p>
+    <p class="site-footer__text">Товары для учёбы, работы и поездок.</p>
   </footer>
+  <a class="back-to-top" href="#">↑ Наверх</a>
 </body>
 </html>
